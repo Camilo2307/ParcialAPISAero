@@ -28,7 +28,6 @@ export class AerolineaAeropuertoController {
         return await this.aerolineaAeropuertoService.findAirportFromAirline(aerolineaId, aeropuertoId);
     }
 
-    // Aquí el cambio importante: recibir un arreglo de strings (IDs)
     @Put(':aerolineaId/aeropuertos')
     async updateAirportsFromAirline(
       @Param('aerolineaId') aerolineaId: string, 
@@ -36,7 +35,6 @@ export class AerolineaAeropuertoController {
     ) {
         return await this.aerolineaAeropuertoService.updateAirportsFromAirline(aerolineaId, aeropuertoIds);
     }
-
     @Delete(':aerolineaId/aeropuertos/:aeropuertoId')
     @HttpCode(204)
     async deleteAirportFromAirline(
