@@ -4,7 +4,7 @@ import { Aerolinea } from '../aerolinea/aerolinea.entity';
 @Entity()
 export class Aeropuerto {
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
   @Column()
   nombre: string;
